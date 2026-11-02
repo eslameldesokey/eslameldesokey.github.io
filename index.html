@@ -26,7 +26,7 @@ nav.sc{background:rgba(7,8,21,.75);backdrop-filter:blur(14px);border-bottom:1px 
 .pill a.on{background:var(--p);color:#04121a;box-shadow:0 0 18px var(--p)}.pill a:hover{color:#fff}
 .hire{color:var(--p);border:1px solid var(--p);text-decoration:none;font-weight:600;font-size:14px;padding:8px 20px;border-radius:30px;transition:.3s}.hire:hover{background:var(--p);color:#04121a;box-shadow:0 0 20px var(--p)}
 .mb{display:none;background:none;border:1px solid var(--ln);color:var(--tx);border-radius:10px;padding:6px 12px;font-size:20px;cursor:pointer}
-@media(max-width:860px){.pill{display:none;position:absolute;top:100%;left:16px;right:16px;flex-direction:column;border-radius:18px;background:rgba(10,12,28,.95);backdrop-filter:blur(14px);padding:8px}.pill.open{display:flex}.hire{display:none}.mb{display:block}}
+@media(max-width:1000px){.pill{display:none;position:absolute;top:100%;left:16px;right:16px;flex-direction:column;border-radius:18px;background:rgba(10,12,28,.95);backdrop-filter:blur(14px);padding:8px}.pill.open{display:flex}.hire{display:none}.mb{display:block}}
 main{position:relative;z-index:1}
 section{max-width:1100px;margin:auto;padding:90px 22px}
 .eb{display:block;text-align:center;font-size:11px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--p);margin-bottom:8px}
@@ -63,6 +63,24 @@ h2.rl{font-size:clamp(19px,3vw,30px);margin:0 0 20px;font-weight:600}
 @media(max-width:860px){.tl::before{left:6px}.it,.it:nth-child(even){width:auto;margin-left:32px}.it::before,.it:nth-child(odd)::before,.it:nth-child(even)::before{left:-33px;right:auto}}
 .pj{min-height:280px;border:2px dashed rgba(34,211,238,.3);background:rgba(34,211,238,.03);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:6px}
 .pj .pl{font-size:38px;color:var(--p);line-height:1}.pj:hover{border-color:var(--p)}
+.gf{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 30px}
+.gf button{font:inherit;font-size:14px;font-weight:500;color:var(--mu);background:rgba(255,255,255,.05);border:1px solid var(--ln);border-radius:30px;padding:7px 18px;cursor:pointer;transition:.3s}
+.gf button span{opacity:.6;font-size:12px;margin-left:3px}.gf button:hover{color:#fff}
+.gf button[aria-pressed=true]{background:var(--p);color:#04121a;border-color:var(--p);box-shadow:0 0 18px rgba(34,211,238,.45)}
+.gg{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.gi{position:relative;display:block;width:100%;padding:0;border:1px solid var(--ln);border-radius:16px;overflow:hidden;background:rgba(255,255,255,.04);cursor:zoom-in;aspect-ratio:16/10;transition:.35s;font:inherit;color:inherit}
+.gi[hidden]{display:none}
+.gi:hover,.gi:focus-visible{border-color:rgba(34,211,238,.6);box-shadow:0 0 30px rgba(34,211,238,.15);transform:translateY(-4px);outline:none}
+.gi img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}.gi:hover img{transform:scale(1.05)}
+.gc{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 11px;text-align:left;font-size:13px;font-weight:600;line-height:1.35;background:linear-gradient(transparent,rgba(7,8,21,.92))}
+.lb{position:fixed;inset:0;z-index:100;display:none;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:calc(56px + env(safe-area-inset-top,0px)) 16px calc(20px + env(safe-area-inset-bottom,0px));background:rgba(4,5,14,.95);backdrop-filter:blur(8px)}
+.lb.open{display:flex}
+.lb img{max-width:min(100%,1400px);max-height:calc(100vh - 170px);object-fit:contain;border-radius:10px;border:1px solid var(--ln);background:#0b0d1e}
+.lb p{margin:0;text-align:center;font-weight:600;font-size:15px}.lb p small{display:block;color:var(--mu);font-weight:500;font-size:12px}
+.lb .lbtn{position:absolute;display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid var(--ln);background:rgba(255,255,255,.08);color:var(--tx);font-size:22px;cursor:pointer;transition:.3s}
+.lb .lbtn:hover,.lb .lbtn:focus-visible{border-color:var(--p);color:var(--p);outline:none}
+.lb .x{top:calc(10px + env(safe-area-inset-top,0px));right:14px}.lb .pv{left:12px;top:50%}.lb .nx{right:12px;top:50%}
+@media(max-width:600px){.lb .pv,.lb .nx{top:auto;bottom:calc(14px + env(safe-area-inset-bottom,0px))}.lb .pv{left:16px}.lb .nx{right:16px}.lb img{max-height:calc(100vh - 210px)}}
 footer{position:relative;z-index:1;border-top:1px solid var(--ln);text-align:center;padding:34px 20px;color:var(--mu);font-size:14px}
 footer b{color:var(--tx);font-size:18px}footer b i{color:var(--p);font-style:normal}
 .au{opacity:0;transform:translateY(36px);transition:opacity .85s cubic-bezier(.2,.7,.2,1),transform .85s cubic-bezier(.2,.7,.2,1)}
@@ -75,7 +93,7 @@ footer b{color:var(--tx);font-size:18px}footer b i{color:var(--p);font-style:nor
 
 <nav id="nv"><div class="nw">
 <a class="logo" href="#home"><i>&lt;</i>Eslam<i>/&gt;</i></a>
-<div class="pill" id="pl"><a href="#home" class="on">Home</a><a href="#about">About Me</a><a href="#skills">Skills &amp; Tools</a><a href="#exp">Experience</a><a href="#projects">Featured Projects</a><a href="#edu">Education</a><a href="#contact">Get In Touch</a></div>
+<div class="pill" id="pl"><a href="#home" class="on">Home</a><a href="#about">About Me</a><a href="#skills">Skills &amp; Tools</a><a href="#exp">Experience</a><a href="#projects">Featured Projects</a><a href="#gallery">Gallery</a><a href="#edu">Education</a><a href="#contact">Get In Touch</a></div>
 <a class="hire" href="mailto:eslameldesokey98@gmail.com">Hire Me</a>
 <button class="mb" id="mb" aria-label="Open menu">☰</button>
 </div></nav>
@@ -133,6 +151,37 @@ footer b{color:var(--tx);font-size:18px}footer b i{color:var(--p);font-style:nor
 <div class="cd au" style="transition-delay:0.12s"><h3>Ammunition Depots</h3><p>South Sinai, Egypt</p><div style="margin-top:10px"><span class="tg">Electrical Engineer</span><span class="tg">Egyptian Armed Forces</span></div></div>
 </div></section>
 
+<section id="gallery">
+<span class="eb au">Gallery</span><h2 class="t au">Work Gallery</h2><p class="sub au">A selection of my Revit models, shop drawings, AutoCAD layouts, schedules and calculations. Tap any image to view it full size.</p>
+<div class="gf au" role="group" aria-label="Filter gallery"><button type="button" data-f="all" aria-pressed="true">All <span>25</span></button><button type="button" data-f="revit" aria-pressed="false">Revit Models <span>6</span></button><button type="button" data-f="shop" aria-pressed="false">Shop Drawings <span>5</span></button><button type="button" data-f="cad" aria-pressed="false">AutoCAD Layouts <span>9</span></button><button type="button" data-f="calc" aria-pressed="false">Schedules &amp; Calculations <span>5</span></button></div>
+<div class="gg" id="gg">
+<button class="gi" type="button" data-cat="revit" data-full="images/revit-lighting-ground-floor.webp" data-cap="Lighting Model – Ground Floor (Revit)"><img src="images/thumb/revit-lighting-ground-floor.webp" alt="Lighting Model – Ground Floor (Revit)" width="640" height="404" loading="lazy" decoding="async"><span class="gc">Lighting Model – Ground Floor (Revit)</span></button>
+<button class="gi" type="button" data-cat="revit" data-full="images/revit-power-ground-floor.webp" data-cap="Power Model – Ground Floor (Revit)"><img src="images/thumb/revit-power-ground-floor.webp" alt="Power Model – Ground Floor (Revit)" width="640" height="386" loading="lazy" decoding="async"><span class="gc">Power Model – Ground Floor (Revit)</span></button>
+<button class="gi" type="button" data-cat="revit" data-full="images/revit-low-current-ground-floor.webp" data-cap="Low-Current Model – Ground Floor (Revit)"><img src="images/thumb/revit-low-current-ground-floor.webp" alt="Low-Current Model – Ground Floor (Revit)" width="640" height="385" loading="lazy" decoding="async"><span class="gc">Low-Current Model – Ground Floor (Revit)</span></button>
+<button class="gi" type="button" data-cat="revit" data-full="images/revit-fire-alarm-ground-floor.webp" data-cap="Fire Alarm Model – Ground Floor (Revit)"><img src="images/thumb/revit-fire-alarm-ground-floor.webp" alt="Fire Alarm Model – Ground Floor (Revit)" width="640" height="385" loading="lazy" decoding="async"><span class="gc">Fire Alarm Model – Ground Floor (Revit)</span></button>
+<button class="gi" type="button" data-cat="revit" data-full="images/revit-lighting-sheet.webp" data-cap="Lighting Sheet Layout (Revit)"><img src="images/thumb/revit-lighting-sheet.webp" alt="Lighting Sheet Layout (Revit)" width="640" height="384" loading="lazy" decoding="async"><span class="gc">Lighting Sheet Layout (Revit)</span></button>
+<button class="gi" type="button" data-cat="revit" data-full="images/revit-electrical-legend.webp" data-cap="Electrical Legend &amp; Symbols (Revit)"><img src="images/thumb/revit-electrical-legend.webp" alt="Electrical Legend &amp; Symbols (Revit)" width="640" height="382" loading="lazy" decoding="async"><span class="gc">Electrical Legend &amp; Symbols (Revit)</span></button>
+<button class="gi" type="button" data-cat="shop" data-full="images/shop-cable-routing.webp" data-cap="Cable Routing Shop Drawing"><img src="images/thumb/shop-cable-routing.webp" alt="Cable Routing Shop Drawing" width="640" height="564" loading="lazy" decoding="async"><span class="gc">Cable Routing Shop Drawing</span></button>
+<button class="gi" type="button" data-cat="shop" data-full="images/shop-low-current.webp" data-cap="Low-Current Shop Drawing"><img src="images/thumb/shop-low-current.webp" alt="Low-Current Shop Drawing" width="640" height="396" loading="lazy" decoding="async"><span class="gc">Low-Current Shop Drawing</span></button>
+<button class="gi" type="button" data-cat="shop" data-full="images/shop-power.webp" data-cap="Power Shop Drawing"><img src="images/thumb/shop-power.webp" alt="Power Shop Drawing" width="640" height="550" loading="lazy" decoding="async"><span class="gc">Power Shop Drawing</span></button>
+<button class="gi" type="button" data-cat="shop" data-full="images/shop-wall-coordination.webp" data-cap="Wall Coordination – Electrical Points"><img src="images/thumb/shop-wall-coordination.webp" alt="Wall Coordination – Electrical Points" width="640" height="419" loading="lazy" decoding="async"><span class="gc">Wall Coordination – Electrical Points</span></button>
+<button class="gi" type="button" data-cat="shop" data-full="images/shop-routing-callouts.webp" data-cap="Conduit &amp; Cable Routing Details"><img src="images/thumb/shop-routing-callouts.webp" alt="Conduit &amp; Cable Routing Details" width="640" height="425" loading="lazy" decoding="async"><span class="gc">Conduit &amp; Cable Routing Details</span></button>
+<button class="gi" type="button" data-cat="cad" data-full="images/cad-lighting-layout.webp" data-cap="Lighting Layout (AutoCAD)"><img src="images/thumb/cad-lighting-layout.webp" alt="Lighting Layout (AutoCAD)" width="640" height="344" loading="lazy" decoding="async"><span class="gc">Lighting Layout (AutoCAD)</span></button>
+<button class="gi" type="button" data-cat="cad" data-full="images/cad-power-distribution.webp" data-cap="Power Distribution Layout (AutoCAD)"><img src="images/thumb/cad-power-distribution.webp" alt="Power Distribution Layout (AutoCAD)" width="640" height="344" loading="lazy" decoding="async"><span class="gc">Power Distribution Layout (AutoCAD)</span></button>
+<button class="gi" type="button" data-cat="cad" data-full="images/cad-hvac-electrical.webp" data-cap="HVAC Electrical Layout (AutoCAD)"><img src="images/thumb/cad-hvac-electrical.webp" alt="HVAC Electrical Layout (AutoCAD)" width="640" height="344" loading="lazy" decoding="async"><span class="gc">HVAC Electrical Layout (AutoCAD)</span></button>
+<button class="gi" type="button" data-cat="cad" data-full="images/cad-street-lighting.webp" data-cap="Street Lighting Layout (AutoCAD)"><img src="images/thumb/cad-street-lighting.webp" alt="Street Lighting Layout (AutoCAD)" width="640" height="344" loading="lazy" decoding="async"><span class="gc">Street Lighting Layout (AutoCAD)</span></button>
+<button class="gi" type="button" data-cat="cad" data-full="images/cad-cable-routing.webp" data-cap="Cable Routing Layout (AutoCAD)"><img src="images/thumb/cad-cable-routing.webp" alt="Cable Routing Layout (AutoCAD)" width="640" height="345" loading="lazy" decoding="async"><span class="gc">Cable Routing Layout (AutoCAD)</span></button>
+<button class="gi" type="button" data-cat="cad" data-full="images/cad-single-line-diagram.webp" data-cap="Single Line Diagram (AutoCAD)"><img src="images/thumb/cad-single-line-diagram.webp" alt="Single Line Diagram (AutoCAD)" width="640" height="344" loading="lazy" decoding="async"><span class="gc">Single Line Diagram (AutoCAD)</span></button>
+<button class="gi" type="button" data-cat="cad" data-full="images/cad-earthing-low-current.webp" data-cap="Earthing – Low-Current System"><img src="images/thumb/cad-earthing-low-current.webp" alt="Earthing – Low-Current System" width="640" height="344" loading="lazy" decoding="async"><span class="gc">Earthing – Low-Current System</span></button>
+<button class="gi" type="button" data-cat="cad" data-full="images/cad-lightning-air-terminals.webp" data-cap="Lightning Protection – Air Terminal Plan"><img src="images/thumb/cad-lightning-air-terminals.webp" alt="Lightning Protection – Air Terminal Plan" width="640" height="344" loading="lazy" decoding="async"><span class="gc">Lightning Protection – Air Terminal Plan</span></button>
+<button class="gi" type="button" data-cat="cad" data-full="images/cad-lightning-mesh.webp" data-cap="Lightning Protection – Mesh Plan"><img src="images/thumb/cad-lightning-mesh.webp" alt="Lightning Protection – Mesh Plan" width="640" height="344" loading="lazy" decoding="async"><span class="gc">Lightning Protection – Mesh Plan</span></button>
+<button class="gi" type="button" data-cat="calc" data-full="images/calc-short-circuit.webp" data-cap="One-Line Diagram – Short-Circuit Analysis"><img src="images/thumb/calc-short-circuit.webp" alt="One-Line Diagram – Short-Circuit Analysis" width="640" height="340" loading="lazy" decoding="async"><span class="gc">One-Line Diagram – Short-Circuit Analysis</span></button>
+<button class="gi" type="button" data-cat="calc" data-full="images/calc-load-flow.webp" data-cap="One-Line Diagram – Load Flow &amp; Voltage Drop"><img src="images/thumb/calc-load-flow.webp" alt="One-Line Diagram – Load Flow &amp; Voltage Drop" width="640" height="327" loading="lazy" decoding="async"><span class="gc">One-Line Diagram – Load Flow &amp; Voltage Drop</span></button>
+<button class="gi" type="button" data-cat="calc" data-full="images/calc-panel-schedule-revit.webp" data-cap="Panel Schedule (Revit)"><img src="images/thumb/calc-panel-schedule-revit.webp" alt="Panel Schedule (Revit)" width="640" height="382" loading="lazy" decoding="async"><span class="gc">Panel Schedule (Revit)</span></button>
+<button class="gi" type="button" data-cat="calc" data-full="images/calc-panel-schedule-excel.webp" data-cap="Panel Schedule (Excel)"><img src="images/thumb/calc-panel-schedule-excel.webp" alt="Panel Schedule (Excel)" width="640" height="344" loading="lazy" decoding="async"><span class="gc">Panel Schedule (Excel)</span></button>
+<button class="gi" type="button" data-cat="calc" data-full="images/calc-equipment-schedule.webp" data-cap="Electrical Equipment Schedule (Revit)"><img src="images/thumb/calc-equipment-schedule.webp" alt="Electrical Equipment Schedule (Revit)" width="640" height="379" loading="lazy" decoding="async"><span class="gc">Electrical Equipment Schedule (Revit)</span></button>
+</div></section>
+
 <section id="edu">
 <span class="eb au">Education</span><h2 class="t au">Education</h2><p class="sub au">Academic background and professional training.</p>
 <div class="g3">
@@ -151,6 +200,13 @@ footer b{color:var(--tx);font-size:18px}footer b i{color:var(--p);font-style:nor
 <div class="row"><span>Location</span>Cairo, Egypt</div></div>
 </section>
 </main>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+<button class="lbtn x" type="button" aria-label="Close">✕</button>
+<button class="lbtn pv" type="button" aria-label="Previous image">‹</button>
+<img alt="">
+<p><span id="lbc"></span><small id="lbn"></small></p>
+<button class="lbtn nx" type="button" aria-label="Next image">›</button>
+</div>
 <footer><b><i>&lt;</i>Eslam Eldesokey<i>/&gt;</i></b><p>© 2026 Eslam Eldesokey. All rights reserved.</p></footer>
 
 <script>
@@ -171,6 +227,22 @@ var nv=document.getElementById('nv'),pl=document.getElementById('pl');
 function sc(){nv.classList.toggle('sc',window.scrollY>20)}sc();window.addEventListener('scroll',sc,{passive:true});
 document.getElementById('mb').addEventListener('click',function(){pl.classList.toggle('open')});
 pl.addEventListener('click',function(){pl.classList.remove('open')});
+})();
+</script>
+<script>
+(function(){
+var gg=document.getElementById('gg'),items=[].slice.call(gg.querySelectorAll('.gi')),chips=document.querySelectorAll('.gf button'),lb=document.getElementById('lb'),im=lb.querySelector('img'),cp=document.getElementById('lbc'),cn=document.getElementById('lbn'),list=[],cur=0,last=null,tx=null;
+chips.forEach(function(c){c.addEventListener('click',function(){var f=c.getAttribute('data-f');chips.forEach(function(x){x.setAttribute('aria-pressed',x===c?'true':'false')});items.forEach(function(b){b.hidden=f!=='all'&&b.getAttribute('data-cat')!==f})})});
+function render(){var b=list[cur];im.src=b.getAttribute('data-full');im.alt=b.getAttribute('data-cap');cp.textContent=b.getAttribute('data-cap');cn.textContent=(cur+1)+' / '+list.length;[1,-1].forEach(function(d){var n=list[(cur+d+list.length)%list.length];if(n)(new Image()).src=n.getAttribute('data-full')})}
+function open(b){list=items.filter(function(x){return !x.hidden});cur=list.indexOf(b);last=b;render();lb.classList.add('open');document.body.style.overflow='hidden';lb.querySelector('.x').focus()}
+function close(){lb.classList.remove('open');document.body.style.overflow='';if(last)last.focus()}
+function step(d){cur=(cur+d+list.length)%list.length;render()}
+items.forEach(function(b){b.addEventListener('click',function(){open(b)})});
+lb.querySelector('.x').addEventListener('click',close);lb.querySelector('.pv').addEventListener('click',function(){step(-1)});lb.querySelector('.nx').addEventListener('click',function(){step(1)});
+lb.addEventListener('click',function(e){if(e.target===lb)close()});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();else if(e.key==='ArrowLeft')step(-1);else if(e.key==='ArrowRight')step(1)});
+lb.addEventListener('touchstart',function(e){tx=e.changedTouches[0].clientX},{passive:true});
+lb.addEventListener('touchend',function(e){if(tx===null)return;var d=e.changedTouches[0].clientX-tx;tx=null;if(Math.abs(d)>50)step(d>0?-1:1)},{passive:true});
 })();
 </script>
 </body>
